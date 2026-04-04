@@ -1,0 +1,157 @@
+
+body {
+    background-color: #131313;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background: linear-gradient(135deg, #1d1d1d, #000000);
+}
+
+.login-form {
+    position: relative;
+    padding: 160px 70px;
+    border-radius: 16px;
+    background: rgba(45, 45, 45, 0.28);
+    backdrop-filter: blur(17.5px);
+    -webkit-backdrop-filter: blur(17.5px);
+    
+    border: 3px solid rgba(255, 255, 255, 0.1); 
+    background-clip: padding-box; 
+    
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.login-form::after {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    border-radius: 16px; 
+    padding: 2px; 
+    
+    background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%), 
+        rgb(102, 255, 0) 0%, 
+        transparent 25%
+    );
+    
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.login-form::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%), 
+        rgba(179, 255, 0, 0.2), 
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+
+.login-form:hover::before,
+.login-form:hover::after {
+    opacity: 1;
+}
+
+.input-group {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #AAFF00;
+}
+
+.input-group input {
+    width: 528px;
+    height: 3.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #AAFF00;
+}
+
+.input-group, button {
+    margin-top: 20px;
+}
+
+.login-container h2 {
+    margin: 0;
+    font-size: 48px;
+    color: #AAFF00;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+input, button {
+    width: 100%;
+    max-width: 528px;
+    padding: 14px 16px;   
+    box-sizing: border-box; 
+}
+
+.input-group input::placeholder {
+    color: #bcbcbc;
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.login-form button {
+    height: 3.5rem;
+    padding: 0px 20px;
+    background: linear-gradient(90deg, #AF0 0%, #460 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+    background: linear-gradient(90deg, rgb(135, 201, 2) 0%, rgb(46, 68, 1) 100%);
+    opacity: 0.9;
+}
+
+.form-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 28vh;
+}
+
+.form-footer a {
+    color: #AAFF00;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
