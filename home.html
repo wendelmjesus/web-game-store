@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img id="menu-icon" width="40" height="40" src="https://img.icons8.com/ios-filled/50/aaff00/menu--v1.png" alt="menu-icon"/>
+        </button>
+
+        <a href="login.html" class="login-icon-btn">
+            <img src="https://img.icons8.com/puffy-filled/32/aaff00/test-account.png" alt="test-account"/>
+        </a>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 style="color: #aaff00;"></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="#">Promoções</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                    <li><a href="#">Suporte</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

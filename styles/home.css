@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #131313;
+}
+
+:root {
+    --bg-dark: #131313;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-dark);
+    position: fixed;
+    top: 0;
+    left: -280px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    border-right: 2px solid var(--neon-green);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.menu-btn.active-btn {
+    transform: rotate(90deg) scale(1) translateX(-40px) translateY(40px); 
+    opacity: 0.8;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 60px;
+    left: 60px;
+    z-index: 1100;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+}
+#menu-icon {
+    width: 30px;    
+    height: 30px;   
+    transition: 0.3s;
+}
+
+.sidebar ul {
+    padding: 0px;
+    list-style: none;
+    margin-top: 90px;
+    margin-left: 20px;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 20px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.sidebar li a:hover {
+    background: rgb(170, 255, 0);
+    color: var(--neon-green);
+    padding-left: 30px; 
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(3px); 
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.login-icon-btn {
+    position: fixed;
+    top: 60px;    
+    right: 60px;  
+    z-index: 1100;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.login-icon-btn img {
+    width: 40px;  
+    height: 40px;
+    display: block;
+}
+
+.login-icon-btn:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px var(--neon-green));
+}

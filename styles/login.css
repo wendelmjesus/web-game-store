@@ -4,7 +4,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-
 .login-container {
     display: flex;
     flex-direction: column;
@@ -39,17 +38,19 @@ body {
     padding: 2px; 
     
     background: radial-gradient(
-        circle at var(--x, 50%) var(--y, 50%), 
-        rgb(102, 255, 0) 0%, 
-        transparent 25%
+        800px circle at var(--x) var(--y),
+        rgba(170, 255, 0, 0.9),
+        rgba(170, 255, 0, 0.4) 20%,
+        transparent 80%
     );
-    
+
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
     pointer-events: none;
 }
 
@@ -58,12 +59,12 @@ body {
     position: absolute;
     inset: 0;
     background: radial-gradient(
-        circle at var(--x, 50%) var(--y, 50%), 
-        rgba(179, 255, 0, 0.2), 
-        transparent 60%
+        400px circle at var(--x) var(--y), 
+        rgba(170, 255, 0, 0.08), 
+        transparent 80%
     );
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
     z-index: -1;
 }
 

@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
 
     <div class="login-container">
-        <form class="login-form">
+        <form class="login-form" action="home.html" method="GET">
 
-            <h2>Cadastrar</h2>
-
-
-            <div class="input-group">
-                <label for="name">Nome</label>
-                <input type="text" id="name" placeholder="Digite seu nome" required>
-            </div>
+            <h2>Login</h2>
 
             <div class="input-group">
                 <label for="email">E-mail</label>
@@ -34,13 +28,15 @@
 
             <button type="submit">Entrar</button>
 
-            
+            <div class="form-footer">
+                <a href="#">Esqueci a senha</a>
+                <a href="register.html">Criar uma conta</a>
+            </div>
 
         </form>
-
-        <script src="script.js"></script>
     </div>
 
-    
+    <script src="script.js"></script>
+
 </body>
 </html>
