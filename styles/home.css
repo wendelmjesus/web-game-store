@@ -8,6 +8,98 @@ body {
     --bg-dark: #131313;
 }
 
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;   /* importante pro efeito de scroll aparecer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1050;
+    pointer-events: none;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-header.scrolled {
+    background: linear-gradient(to bottom, rgba(19, 19, 19, 0.95), rgba(19, 19, 19, 0.75));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    border: 0;
+    margin-top: 5px;
+}
+
+.search-box input {
+    width: 400px;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 40px;
+    background-color: #1f1f1f;
+    border: 0;
+    color: #aaff00;
+    font-size: 18px;
+}
+
+.search-box input::placeholder {
+    color: #aaff00;
+    font-size: 16px;
+    text-align: center;
+    border: 0;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    z-index: 1100;
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+}
+
+.menu-btn img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.login-icon-btn {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    z-index: 1100;
+    pointer-events: auto;
+}
+
+.login-icon-btn img {
+    width: 45px;  
+    height: 45px;
+    display: block;
+}
+
+.login-icon-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    filter: drop-shadow(0 0 8px var(--neon-green));
+}
+
+.main-header .menu-btn,
+.main-header .login-icon-btn {
+    pointer-events: auto;
+}
+
 .sidebar {
     width: 280px;
     height: 100vh;
@@ -29,21 +121,6 @@ body {
     opacity: 0.8;
 }
 
-.menu-btn {
-    position: fixed;
-    top: 60px;
-    left: 60px;
-    z-index: 1100;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
-}
-#menu-icon {
-    width: 30px;    
-    height: 30px;   
-    transition: 0.3s;
-}
 
 .sidebar ul {
     padding: 0px;
@@ -81,21 +158,196 @@ body {
     display: block;
 }
 
-.login-icon-btn {
-    position: fixed;
-    top: 60px;    
-    right: 60px;  
-    z-index: 1100;
-    transition: transform 0.3s ease, filter 0.3s ease;
+
+
+
+.slides {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
 }
 
-.login-icon-btn img {
-    width: 40px;  
-    height: 40px;
+.banner {
+    position: relative;
+    width: 85vw;
+    height: 650px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-.login-icon-btn:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 8px var(--neon-green));
+.overlay-banner {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.banner:hover .overlay-banner {
+    opacity: 1;
+}
+
+.banner:hover .banner-content {
+    opacity: 1;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    color: #AAFF00;
+    margin-bottom: -25px;
+    
+}
+.banner-content p {
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 500px;
+}
+
+.banner-content button {
+    padding: 20px 70px;
+    border: none;
+    background: #AAFF00;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.banner-content button:hover {
+    background-color: #90d800;
+    transition: ease-in-out 0.5s;
+    transform: scale(1.05);
+}
+
+.h2-game-grid {
+    margin: 90px 0px 45px 0px;
+    font-size: 32px;
+    color: #AAFF00;
+    text-align: center;
+    font-weight: 700;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:25px;
+    max-width: 1100px;
+    justify-content: center;
+    margin: 40px auto;
+    perspective: 1000px;
+}
+
+.game-card {
+    width: 35vh;
+    height: 45vh;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.game-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.game-card.flipped .game-card-inner {
+    transform: rotateY(180deg);
+}
+
+.game-card-front, 
+.game-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box; 
+}
+
+.game-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+.game-card-back {
+    background: linear-gradient(182deg,rgba(33, 33, 33, 1) 0%, rgba(48, 48, 48, 1) 100%);
+    color: #AAFF00;;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid;
+    border-color: #AAFF00 ;
+}
+
+.game-card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.8rem;
+    color: #AAFF00;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    background-color: #AAFF00;
+    color: #000000;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Loja de Jogos</title>
+</head>
+
+<body>
+    <header class="main-header">
+
+        <div class="search-box">
+            <input type="text" placeholder="Pesquisar jogos...">
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img 
+                src="https://img.icons8.com/ios-filled/50/aaff00/menu--v1.png"
+                alt="">
+        </button>
+
+        <a href="login.html" class="login-icon-btn">
+            <img 
+            src="https://img.icons8.com/puffy-filled/32/aaff00/test-account.png"
+                alt="login">
+        </a>
+    </header>
+
+    <div class="slides">
+        <div class="banner">
+            <img src="../image/banner.png" alt="Banner">
+
+            <div class="overlay-banner"></div>
+
+            <div class="banner-content">
+                <h1>Promoção de Outono:</h1>
+                <p>Seus jogos favoritos com desconto.</p>
+                <button>Saiba Mais</button>
+            </div>
+        </div>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color: #aaff00;"></h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Gift Card</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <div class="indicators">
+        <span class="active"></span>
+        <span></span>
+    </div>
+
+    <h2 class="h2-game-grid">Principais Jogos</h2>
+
+    <section class="game-grid">
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/nba2k26.webp" alt="NBA 2K26">
+                </div>
+                <div class="game-card-back">
+                    <h3>NBA 2K26</h3>
+                    <p class="price">R$ 349,90</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/fifa26.avif" alt="EA Sports FC 26">
+                </div>
+                <div class="game-card-back">
+                    <h3>EA Sports FC 26</h3>
+                    <p class="price">R$ 299,90</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/minecraft.png" alt="Minecraft">
+                </div>
+                <div class="game-card-back">
+                    <h3>Minecraft</h3>
+                    <p class="price">R$ 99,00</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/lego.jpeg" alt="Lego Batman">
+                </div>
+                <div class="game-card-back">
+                    <h3>Lego Batman</h3>
+                    <p class="price">R$ 149,90</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/demon-slayer.jpeg" alt="Demon Slayer">
+                </div>
+                <div class="game-card-back">
+                    <h3>Demon Slayer</h3>
+                    <p class="price">R$ 199,00</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/eldenring.jpg" alt="GTA VI">
+                </div>
+                <div class="game-card-back">
+                    <h3>GTA VI</h3>
+                    <p class="price">R$ 499,90</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/madden26.avif" alt="GTA VI">
+                </div>
+                <div class="game-card-back">
+                    <h3>GTA VI</h3>
+                    <p class="price">R$ 499,90</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="this.classList.toggle('flipped')">
+            <div class="game-card-inner">
+                <div class="game-card-front">
+                    <img src="../games-image/gta6.png" alt="GTA VI">
+                </div>
+                <div class="game-card-back">
+                    <h3>GTA VI</h3>
+                    <p class="price">R$ 499,90</p>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
