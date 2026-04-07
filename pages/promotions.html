@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções - GameStore</title>
+    <link rel="stylesheet" href="../styles/promotions.css">
+    <link rel="stylesheet" href="../styles/games.css">
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquisar">
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img src="https://img.icons8.com/ios-filled/50/aaff00/menu--v1.png" alt="">
+        </button>
+
+        <a href="login.html" class="login-icon-btn">
+            <img src="https://img.icons8.com/puffy-filled/32/aaff00/test-account.png" alt="login">
+        </a>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color: #aaff00;"></h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="games.html">Jogos</a></li>
+                <li><a href="promotions.html">Promoções</a></li>
+                <li><a href="giftcard.html">Gift Card</a></li>
+                <li><a href="../pages/suport.html">Suporte</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <section class="promotions-hero">
+        <h1>Promoção de Outono</h1>
+        <p>Até 45% OFF em títulos selecionados por tempo limitado.</p>
+    </section>
+
+    <section class="promo-banner">
+        <img src="../image/banner.png" alt="Promoção de Outono">
+        <div class="overlay-banner"></div>
+        <div class="banner-content">
+            <h1>Promoção de Outono</h1>
+            <p>Estoques limitados — garanta já os destaques da temporada.</p>
+            <button onclick="window.location.href='games.html'">Ver Catálogo</button>
+        </div>
+    </section>
+
+    <div class="search-results-message" id="searchResultsMessage"></div>
+
+    <section class="games-grid promotions-grid">
+        <div class="game-card">
+            <div class="promo-badge">-35%</div>
+            <div class="game-card-front">
+                <img src="../games-image/eldenring.jpg" alt="Elden Ring">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Elden Ring</h3>
+                        <p class="game-description">A obra-prima de FromSoftware</p>
+                        <div class="game-meta">
+                            <span class="game-genre">RPG</span>
+                            <span class="game-platform">PC/Console</span>
+                            <span class="game-rating">★★★★★ 4.7</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 249,90</span>
+                            <span class="new-price">R$ 162,40</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="promo-badge">-40%</div>
+            <div class="game-card-front">
+                <img src="../games-image/cyberpunk.jpeg" alt="Cyberpunk 2077">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <p class="game-description">Viva em Night City como um mercenário</p>
+                        <div class="game-meta">
+                            <span class="game-genre">RPG/Ação</span>
+                            <span class="game-platform">PC</span>
+                            <span class="game-rating">★★★★☆ 4.1</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 199,00</span>
+                            <span class="new-price">R$ 119,40</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="promo-badge">-30%</div>
+            <div class="game-card-front">
+                <img src="../games-image/fifa26.avif" alt="EA Sports FC 26">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>EA Sports FC 26</h3>
+                        <p class="game-description">O simulador de futebol mais realista</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Esporte</span>
+                            <span class="game-platform">PC/Console</span>
+                            <span class="game-rating">★★★★★ 4.8</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 299,90</span>
+                            <span class="new-price">R$ 209,90</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="promo-badge">-45%</div>
+            <div class="game-card-front">
+                <img src="../games-image/nba2k26.webp" alt="NBA 2K26">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>NBA 2K26</h3>
+                        <p class="game-description">A experiência definitiva do basquete</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Esporte</span>
+                            <span class="game-platform">PC/Console</span>
+                            <span class="game-rating">★★★★☆ 4.5</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 349,90</span>
+                            <span class="new-price">R$ 192,40</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="view-all-container">
+        <button class="view-all-btn" onclick="window.location.href='games.html'">Ver catálogo completo</button>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/games.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/promotions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Todos os Jogos - GameStore</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquisar">
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img
+                src="https://img.icons8.com/ios-filled/50/aaff00/menu--v1.png"
+                alt="">
+        </button>
+
+        <a href="login.html" class="login-icon-btn">
+            <img
+            src="https://img.icons8.com/puffy-filled/32/aaff00/test-account.png"
+                alt="login">
+        </a>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color: #aaff00;"></h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../pages/home.html">Início</a></li>
+                <li><a href="../pages/games.html">Jogos</a></li>
+                <li><a href="../pages/promotions.html">Promoções</a></li>
+                <li><a href="../pages/giftcard.html">Gift Card</a></li>
+                <li><a href="../pages/suport.html">Suporte</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <section class="games-hero">
+        <h1>Todos os Jogos</h1>
+        <p>Explore nossa completa coleção de jogos para todas as plataformas</p>
+    </section>
+
+    <div class="search-results-message" id="searchResultsMessage"></div>
+
+    <section class="games-grid promotions-grid">
+        <div class="game-card">
+            <div class="promo-badge">-35%</div>
+            <div class="game-card-front">
+                <img src="../games-image/eldenring.jpg" alt="Elden Ring">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Elden Ring</h3>
+                        <p class="game-description">A obra-prima de FromSoftware</p>
+                        <div class="game-meta">
+                            <span class="game-genre">RPG</span>
+                            <span class="game-platform">PC/Console</span>
+                            <span class="game-rating">★★★★★ 4.7</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 249,90</span>
+                            <span class="new-price">R$ 162,40</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="promo-badge">-40%</div>
+            <div class="game-card-front">
+                <img src="../games-image/cyberpunk.jpeg" alt="Cyberpunk 2077">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <p class="game-description">Viva em Night City como um mercenário</p>
+                        <div class="game-meta">
+                            <span class="game-genre">RPG/Ação</span>
+                            <span class="game-platform">PC</span>
+                            <span class="game-rating">★★★★☆ 4.1</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 199,00</span>
+                            <span class="new-price">R$ 119,40</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="promo-badge">-30%</div>
+            <div class="game-card-front">
+                <img src="../games-image/fifa26.avif" alt="EA Sports FC 26">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>EA Sports FC 26</h3>
+                        <p class="game-description">O simulador de futebol mais realista</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Esporte</span>
+                            <span class="game-platform">PC/Console</span>
+                            <span class="game-rating">★★★★★ 4.8</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 299,90</span>
+                            <span class="new-price">R$ 209,90</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="promo-badge">-45%</div>
+            <div class="game-card-front">
+                <img src="../games-image/nba2k26.webp" alt="NBA 2K26">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>NBA 2K26</h3>
+                        <p class="game-description">A experiência definitiva do basquete</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Esporte</span>
+                            <span class="game-platform">PC/Console</span>
+                            <span class="game-rating">★★★★☆ 4.5</span>
+                        </div>
+                        <p class="price promo-price">
+                            <span class="old-price">R$ 349,90</span>
+                            <span class="new-price">R$ 192,40</span>
+                        </p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="games-grid" id="gamesGrid">
+        
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/minecraft.png" alt="Minecraft">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Minecraft</h3>
+                        <p class="game-description">Construa, explore e sobreviva</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Sandbox</span>
+                            <span class="game-platform">PC</span>
+                            <span class="game-rating">★★★★★ 4.9</span>
+                        </div>
+                        <p class="price">R$ 99,00</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/battlefield6.jpg" alt="Battlefield 6">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Battlefield 6</h3>
+                        <p class="game-description">Guerra total em escala massiva</p>
+                        <div class="game-meta">
+                            <span class="game-genre">FPS</span>
+                            <span class="game-platform">PC</span>
+                            <span class="game-rating">★★★★☆ 4.2</span>
+                        </div>
+                        <p class="price">R$ 249,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/madden26.avif" alt="Madden NFL 26">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Madden NFL 26</h3>
+                        <p class="game-description">Futebol americano realista</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Esporte</span>
+                            <span class="game-platform">Xbox</span>
+                            <span class="game-rating">★★★★☆ 4.4</span>
+                        </div>
+                        <p class="price">R$ 299,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/lego.jpeg" alt="Lego Batman">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Lego Batman</h3>
+                        <p class="game-description">Aventura épica em Gotham City</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Ação/Aventura</span>
+                            <span class="game-platform">Xbox</span>
+                            <span class="game-rating">★★★★☆ 4.2</span>
+                        </div>
+                        <p class="price">R$ 149,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/gta6.png" alt="Grand Theft Auto VI">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Grand Theft Auto VI</h3>
+                        <p class="game-description">Retorno épico à Vice City</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Ação/Aventura</span>
+                            <span class="game-platform">Xbox</span>
+                            <span class="game-rating">★★★★★ 5.0</span>
+                        </div>
+                        <p class="price">R$ 499,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/tlou2.jpg" alt="The Last of Us Part II">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>The Last of Us Part II</h3>
+                        <p class="game-description">Uma jornada emocional intensa</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Ação/Aventura</span>
+                            <span class="game-platform">PS5</span>
+                            <span class="game-rating">★★★★★ 4.9</span>
+                        </div>
+                        <p class="price">R$ 179,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/gow.jpg" alt="God of War Ragnarök">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>God of War Ragnarök</h3>
+                        <p class="game-description">A conclusão da saga nórdica</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Ação/Aventura</span>
+                            <span class="game-platform">PS5</span>
+                            <span class="game-rating">★★★★★ 4.8</span>
+                        </div>
+                        <p class="price">R$ 349,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="game-card">
+            <div class="game-card-front">
+                <img src="../games-image/spiderman2.jpg" alt="Spider-Man 2">
+                <div class="game-overlay">
+                    <div class="game-info">
+                        <h3>Spider-Man 2</h3>
+                        <p class="game-description">O Homem-Aranha em sua melhor forma</p>
+                        <div class="game-meta">
+                            <span class="game-genre">Ação</span>
+                            <span class="game-platform">PS5</span>
+                            <span class="game-rating">★★★★★ 4.9</span>
+                        </div>
+                        <p class="price">R$ 349,90</p>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="load-more-container" style="display: none;">
+        <button class="load-more-btn" id="loadMoreBtn">Carregar Mais Jogos</button>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

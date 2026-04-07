@@ -1,0 +1,138 @@
+.giftcard-hero {
+    background: linear-gradient(135deg, rgba(19, 19, 19, 0.8) 0%, rgba(26, 26, 26, 0.8) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.giftcard-hero h1 {
+    font-size: 48px;
+    color: #AAFF00;
+    margin-top: 140px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.giftcard-hero p {
+    font-size: 20px;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.giftcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 15px auto 60px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.search-results-message {
+    text-align: center;
+    margin: 10px auto 0;
+}
+
+.search-results-message p {
+    color: #AAFF00;
+    font-size: 16px;
+    margin: 0;
+}
+
+.giftcard-card {
+    background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    width: 100%;
+    max-width: 360px;
+}
+
+.giftcard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: #AAFF00;
+}
+
+.giftcard-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    object-fit: fill;
+}
+
+.giftcard-image::before {
+    font-size: 60px;
+    opacity: 0.3;
+}
+
+.giftcard-content {
+    padding: 24px;
+    text-align: center;
+}
+
+.giftcard-title {
+    font-size: 24px;
+    color: #AAFF00;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.giftcard-description {
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.giftcard-price {
+    font-size: 28px;
+    color: #AAFF00;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(170, 255, 0, 0.5);
+}
+
+.giftcard-button {
+    background: linear-gradient(45deg, #AAFF00, #90d800);
+    color: #000000;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 16px;
+}
+
+.giftcard-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(170, 255, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .giftcard-hero h1 {
+        font-size: 32px;
+    }
+
+    .giftcard-hero p {
+        font-size: 16px;
+    }
+
+    .giftcard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards - GameStore</title>
+    <link rel="stylesheet" href="../styles/giftcard.css">
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+<body>
+    <header class="main-header">
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquisar">
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img 
+                src="https://img.icons8.com/ios-filled/50/aaff00/menu--v1.png"
+                alt="">
+        </button>
+
+        <a href="login.html" class="login-icon-btn">
+            <img 
+            src="https://img.icons8.com/puffy-filled/32/aaff00/test-account.png"
+                alt="login">
+        </a>
+    </header>
+
+
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color: #aaff00;"></h2>
+        </div>
+
+         <nav>
+            <ul>
+                <li><a href="../pages/home.html">Início</a></li>
+                <li><a href="../pages/games.html">Jogos</a></li>
+                <li><a href="../pages/promotions.html">Promoções</a></li>
+                <li><a href="../pages/giftcard.html">Gift Card</a></li>
+                <li><a href="../pages/suport.html">Suporte</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <section class="giftcard-hero">
+        <h1>Gift Cards</h1>
+        <p>Dê o presente dos jogos! Escolha entre nossa seleção de gift cards digitais para seus jogos e plataformas favoritos.</p>
+    </section>
+
+    <div class="search-results-message" id="searchResultsMessage"></div>
+
+    <section class="giftcard-grid">
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$10</h3>
+                <p class="giftcard-description">Perfeito para sessões curtas de jogos ou como um presente atencioso.</p>
+                <div class="giftcard-price">R$10</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$30</h3>
+                <p class="giftcard-description">Ótimo para jogos casuais ou experimentar novos jogos.</p>
+                <div class="giftcard-price">R$30</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$50</h3>
+                <p class="giftcard-description">Ideal para múltiplos jogos indie ou conteúdo DLC.</p>
+                <div class="giftcard-price">R$50</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$100</h3>
+                <p class="giftcard-description">Perfeito para jogos AAA e pacotes de jogos.</p>
+                <div class="giftcard-price">R$100</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$150</h3>
+                <p class="giftcard-description">Excelente para jogos premium e expansões completas.</p>
+                <div class="giftcard-price">R$150</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$250</h3>
+                <p class="giftcard-description">Gift card premium para gamers sérios e entusiastas.</p>
+                <div class="giftcard-price">R$250</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$500</h3>
+                <p class="giftcard-description">Presente ultimate para os jogadores mais dedicados.</p>
+                <div class="giftcard-price">R$500</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+
+        <div class="giftcard-card">
+            <div class="giftcard-image"></div>
+            <div class="giftcard-content">
+                <h3 class="giftcard-title">Gift Card de R$1000</h3>
+                <p class="giftcard-description">O presente definitivo para verdadeiros entusiastas dos jogos.</p>
+                <div class="giftcard-price">R$1000</div>
+                <button class="giftcard-button">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>

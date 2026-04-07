@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - GameStore</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/suport.css">
+</head>
+<body>
+    <header class="main-header">
+        
+        <button class="menu-btn" onclick="toggleMenu()">
+            <img src="https://img.icons8.com/ios-filled/50/aaff00/menu--v1.png" alt="">
+        </button>
+
+        <a href="login.html" class="login-icon-btn">
+            <img src="https://img.icons8.com/puffy-filled/32/aaff00/test-account.png" alt="login">
+        </a>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color: #aaff00;"></h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="games.html">Jogos</a></li>
+                <li><a href="promotions.html">Promoções</a></li>
+                <li><a href="giftcard.html">Gift Card</a></li>
+                <li><a href="suport.html">Suporte</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <section class="support-contact" id="contato">
+        <h2>Fale com a gente</h2>
+        <form class="support-form simple-form">
+            <label for="support-name">Nome completo</label>
+            <input id="support-name" name="nome" type="text" placeholder="Digite seu nome" required>
+
+            <label for="support-email">E-mail</label>
+            <input id="support-email" name="email" type="email" placeholder="voce@email.com" required>
+
+            <label for="support-phone">Telefone (com DDD)</label>
+            <input id="support-phone" name="telefone" type="tel" placeholder="(11) 99999-9999" required>
+
+            <label for="support-message">Mensagem</label>
+            <textarea id="support-message" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+
+            <button type="submit" class="support-btn">Enviar</button>
+        </form>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>

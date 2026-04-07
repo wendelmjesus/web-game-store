@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;   /* importante pro efeito de scroll aparecer */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -23,9 +23,7 @@ body {
 }
 
 .main-header.scrolled {
-    background: linear-gradient(to bottom, rgba(19, 19, 19, 0.95), rgba(19, 19, 19, 0.75));
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    background: var(--bg-dark);
 }
 
 .search-box {
@@ -41,7 +39,7 @@ body {
 .search-box input {
     width: 400px;
     height: 50px;
-    padding: 0 30px;
+    padding: 0 20px;
     border-radius: 40px;
     background-color: #1f1f1f;
     border: 0;
@@ -73,6 +71,7 @@ body {
     width: 40px;
     height: 40px;
     display: block;
+    background: transparent;
 }
 
 .login-icon-btn {
@@ -110,10 +109,13 @@ body {
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1000;
     border-right: 2px solid var(--neon-green);
+    padding-top: 80px;
 }
 
 .sidebar.active {
     left: 0;
+    z-index: 999;
+    background-color: #131313;
 }
 
 .menu-btn.active-btn {
@@ -151,15 +153,12 @@ body {
     inset: 0;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(3px); 
-    z-index: 999;
+    z-index: 1;
 }
 
 .overlay.active {
     display: block;
 }
-
-
-
 
 .slides {
     display: flex;
@@ -246,48 +245,59 @@ body {
     color: #AAFF00;
     text-align: center;
     font-weight: 700;
+    }
+
+.h2-promo-grid {
+    margin: 60px 0 25px 0;
+    font-size: 30px;
+    color: #AAFF00;
+    text-align: center;
+    font-weight: 700;
+}
+.h2-giftcard-grid {
+    margin: 60px 0 30px 0;
+    font-size: 30px;
+    color: #AAFF00;
+    text-align: center;
+    font-weight: 700;
 }
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:25px;
-    max-width: 1100px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
     justify-content: center;
+    justify-items: center;
     margin: 40px auto;
     perspective: 1000px;
+    padding: 0 20px;
 }
 
 .game-card {
-    width: 35vh;
-    height: 45vh;
+    width: 100%;
+    max-width: 280px;
+    height: 420px;
     cursor: pointer;
     background-color: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-.game-card-inner {
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.game-card-front {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-}
-
-.game-card.flipped .game-card-inner {
-    transform: rotateY(180deg);
-}
-
-.game-card-front, 
-.game-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-sizing: border-box; 
 }
 
 .game-card-front img {
@@ -295,59 +305,296 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    max-width: 100%;
+    transition: transform 0.3s ease;
 }
 
-.game-card-back {
-    background: linear-gradient(182deg,rgba(33, 33, 33, 1) 0%, rgba(48, 48, 48, 1) 100%);
-    color: #AAFF00;;
-    transform: rotateY(180deg);
+.game-card:hover .game-card-front img {
+    transform: scale(1.05);
+}
+
+.game-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), transparent);
+    padding: 20px;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid;
-    border-color: #AAFF00 ;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: 100%;
 }
 
-.game-card-back h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.game-card:hover .game-overlay {
+    opacity: 1;
+}
+
+.game-info {
+    margin-bottom: 15px;
+}
+
+.game-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #AAFF00;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.game-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.game-genre {
+    background: #AAFF00;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.game-rating {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffd700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .price {
     font-size: 1.8rem;
     color: #AAFF00;
     font-weight: 800;
-    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(170, 255, 0, 0.5);
+    margin-bottom: 15px;
 }
 
 .buy-btn {
-    background-color: #AAFF00;
+    background: linear-gradient(45deg, #AAFF00, #90d800);
     color: #000000;
     border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 700;
     text-transform: uppercase;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(170, 255, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    align-self: flex-start;
+}
+
+.buy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.buy-btn:hover::before {
+    left: 100%;
 }
 
 .buy-btn:hover {
-    filter: brightness(1.2);
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(170, 255, 0, 0.4);
+    background: linear-gradient(45deg, #90d800, #AAFF00);
+}
+
+.giftcard-home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.giftcard-home-card {
+    background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+    border: 2px solid rgba(170, 255, 0, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.giftcard-home-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    border-color: #AAFF00;
+}
+
+.giftcard-home-price {
+    font-size: 28px;
+    font-weight: 800;
+    color: #AAFF00;
+    margin-bottom: 8px;
+}
+
+.giftcard-home-card h3 {
+    color: #ffffff;
+    margin: 6px 0 10px 0;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.giftcard-home-card p {
+    color: #d9d9d9;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 42px;
+    margin-bottom: 18px;
+}
+
+.giftcard-home-btn {
+    background: linear-gradient(45deg, #AAFF00, #90d800);
+    color: #000000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.giftcard-home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(170, 255, 0, 0.35);
+}
+
+@media (max-width: 1200px) {
+    .game-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .game-card {
+        width: 280px;
+        height: 380px;
+    }
 }
 
 @media (max-width: 900px) {
     .game-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .game-card {
+        width: 240px;
+        height: 320px;
     }
 }
 
 @media (max-width: 600px) {
     .game-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .game-card {
+        width: 280px;
+        height: 380px;
+        margin: 0 auto;
+    }
+
+    .h2-game-grid {
+        font-size: 24px;
+        margin: 60px 0 30px 0;
+    }
+}
+
+.view-all-container {
+    text-align: center;
+    margin: 60px 0 100px 0;
+}
+
+.view-all-btn {
+    background: transparent;
+    color: #AAFF00;
+    border: 2px solid #AAFF00;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.view-all-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #AAFF00;
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.view-all-btn:hover::before {
+    left: 0;
+}
+
+.view-all-btn:hover {
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(170, 255, 0, 0.3);
+}
+
+.search-results-message {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.search-results-message p {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
